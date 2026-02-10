@@ -8,34 +8,18 @@ body {
 }
 
 nav {
-    position: sticky;
-    z-index: 1000;
-    width: 100;
-    background: white;
     display: flex;
-    justify-content: space-between;
+    height: 60px;
+    position: relative;
     align-items: center;
-    padding: 0 15px;
-}
-
-.brand a {
-    display: flex;
-    align-items: center;
-    font-weight: bolder;
-    text-decoration: none;
-    font-size: 25px;
-    color: black;
-}
-
-.brand img {
-    width: 88px;
     padding: 0 20px;
+    border-bottom: 1px solid #333;
 }
 
 .nav-links {
+    margin: 0 auto;
     display: flex;
-    gap: 60px;
-    align-items: center;
+    gap: 120px;
 }
 
 .nav-links a {
@@ -43,7 +27,7 @@ nav {
     text-decoration: none;
     font-weight: bolder;
     font-size: 25px;
-    padding: 0 25px;
+    padding: 0 35px;
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -56,4 +40,32 @@ nav {
 
 .nav-links a:active {
     transform: scale(0.96);
+}
+
+.brand {
+    position: absolute;
+    left: 20px;
+}
+
+.brand img {
+    height: 100%;
+    width: 85px;
+    padding: 10px 20px;
+    max-height: 64px;
+    object-fit: contain;
+}
+
+.head h1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+    margin-bottom: 10px;
+    font-size: 40px;
+}
+
+.head p {
+    display: flex;
+    justify-content: center;
+    font-weight: lighter;
+    font-size: 20px;
 }

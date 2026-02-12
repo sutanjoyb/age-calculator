@@ -11,18 +11,28 @@
 
 <body>
     <nav>
-         <div class="brand"><a href="#"><img src="images/logo.jpg" alt="logo"></a></div>
+        <div class="brand"><a href="#"><img src="images/logo.jpg" alt="logo"></a></div>
         <div class="nav-links">
             <a href="#">Home</a>
             <a href="#">About</a>
         </div>
     </nav>
     <main>
-    <div class="head">
-        <h1>Welcome to the Age Calculator!👋</h1>
-        <p>This web application allows you to calculate your age accurately
-            using your date of birth and the current date.</p>
-    </div>
+        <div class="head">
+            <h1>Welcome to the Age Calculator!👋</h1>
+            <p>This web application allows you to calculate your age accurately
+                using your date of birth and the current date.</p>
+        </div>
+        <div class="calculator">
+            <form id="form">
+                <label for="dob">Select your Date of Birth</label>
+                <input type="date" id="dob" required>
+            <div class="btn">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </form>
+            <p id="result"></p>
+        </div>
     </main>
 </body>
 

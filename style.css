@@ -69,3 +69,46 @@ nav {
     font-weight: lighter;
     font-size: 20px;
 }
+
+.calculator {
+    width: 300px;
+    margin: 60px auto;
+    padding: 30px;
+    background-color: #ffeddf;
+    border-radius: 40px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.calculator label {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.calculator input[type="date"] {
+    width: 100%;
+    padding: 3px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    margin-bottom: 18px;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.calculator button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #ffeddf;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}

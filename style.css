@@ -186,24 +186,25 @@ footer {
     }
 
     .brand img {
-        width: 60px;
+        width: 55px;
         height: auto;
     }
 
     .nav-links {
+        display: flex;
         margin: 0;
-        gap: 15px;
-        flex-direction: row;
+        gap: 12px;
     }
 
     .nav-links a {
-        font-size: 16px;
-        padding: 6px 10px;
+        font-size: 14px;
+        padding: 6px 8px;
     }
 
     .calculator {
         width: 100%;
         max-width: 320px;
+        margin: 20px auto;
     }
 
     .btn {

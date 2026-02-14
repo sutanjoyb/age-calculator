@@ -3,16 +3,28 @@
     padding: 0;
 }
 
+html,
+body {
+    height: 100%;
+}
+
 body {
     background: #ebc3db;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
 }
 
 nav {
+    background-color: #fff;
     display: flex;
     height: 60px;
     position: relative;
     align-items: center;
-    padding: 0 20px;
+    padding: 10px 20px;
     border-bottom: 1px solid #333;
 }
 
@@ -27,7 +39,7 @@ nav {
     text-decoration: none;
     font-weight: bolder;
     font-size: 25px;
-    padding: 0 35px;
+    padding: 10px 35px;
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -51,32 +63,32 @@ nav {
     height: 100%;
     width: 85px;
     padding: 10px 20px;
-    max-height: 64px;
+    max-height: 70px;
     object-fit: contain;
 }
 
+.head {
+    text-align: center;
+    margin-top: 120px;
+}
+
 .head h1 {
-    display: flex;
-    justify-content: center;
-    margin-top: 12px;
     margin-bottom: 10px;
     font-size: 40px;
 }
 
 .head p {
-    display: flex;
-    justify-content: center;
     font-weight: lighter;
     font-size: 20px;
 }
 
 .calculator {
-    width: 300px;
-    margin: 60px auto;
+    width: 350px;
+    margin: 40px auto;
     padding: 30px;
     background-color: #ffeddf;
-    border-radius: 40px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     text-align: center;
 }
 
@@ -104,12 +116,49 @@ nav {
 }
 
 .calculator button {
+    margin-bottom: 20px;
+}
+
+.calculator button[type="submit"] {
+    background-color: #e07a9c;
+    color: white;
     padding: 10px 20px;
     font-size: 16px;
     border-radius: 8px;
     border: none;
-    cursor: pointer;
     font-weight: bold;
-    background-color: #ffeddf;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.calculator button[type="reset"] {
+    background-color: #888;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+}
+
+.calculator button:hover {
+    transform: translateY(-2px);
+}
+
+.caluclator button:active {
+    transform: scale(0.96);
+}
+
+footer {
+    background-color: #fff;
+    border-top: 1px solid #333;
+    padding: 15px 0;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.footer-bottom .developer strong {
+    color: #c0392b;
 }

@@ -162,3 +162,70 @@ footer {
 .footer-bottom .developer strong {
     color: #c0392b;
 }
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+        height: 60px;
+        width: 100%;
+    }
+
+    .brand {
+        position: static;          
+        margin: 0;
+    }
+
+    .brand img {
+        width: 70px;
+        height: auto;
+    }
+
+    .nav-links {
+        margin: 0;
+        gap: 20px;
+        flex-direction: row;     
+    }
+
+    .nav-links a {
+        font-size: 18px;
+        padding: 6px 12px;
+    }
+
+    .head {
+        margin-top: 60px;
+        padding: 0 15px;
+        text-align: center;
+    }
+
+    .head h1 {
+        font-size: 22px;
+    }
+
+    .head p {
+        font-size: 14px;
+    }
+
+    .calculator {
+        width: 90%;
+        margin: 40px auto;
+    }
+
+    .btn {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .calculator button {
+        width: 100%;
+    }
+
+    footer {
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+        padding: 12px;
+    }
+}

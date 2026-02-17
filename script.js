@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        result.textContent = `You are ${years} Years, ${months} Months, and ${days} Days old.`;
+        result.textContent = `You're ${years} Years, ${months} Months, and ${days} Days old.`;
     });
 
     form.addEventListener("reset", function () {

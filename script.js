@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    const dobInput = document.getElementById("dob");
+    const form = document.getElementById("form");
     const result = document.getElementById("result");
-    const submitBtn = document.getElementById("submitBtn");
-    const resetBtn = document.getElementById("resetBtn");
+    const dobInput = document.getElementById("dob");
 
-    submitBtn.addEventListener("click", function () {
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
 
         const dobValue = dobInput.value;
 
@@ -40,9 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
         result.textContent = `You are ${years} Years, ${months} Months, and ${days} Days old.`;
     });
 
-    resetBtn.addEventListener("click", function () {
-        dobInput.value = "";
+    form.addEventListener("reset", function () {
         result.textContent = "";
     });
-
 });

@@ -81,8 +81,8 @@ nav {
 
 .calculator {
     width: 100%;
-    max-width: 350px;
-    padding: 30px;
+    max-width: 360px;
+    padding: 40px;
     background-color: #ffeddf;
     border-radius: 20px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
@@ -183,7 +183,7 @@ footer {
     }
 
     .calculator {
-        max-width: 320px;
+        max-width: 290px;
     }
 
     .btn {

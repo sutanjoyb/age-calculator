@@ -1,33 +1,48 @@
-const form = document.getElementById("form");
-const dobInput = document.getElementById("dob");
-const result = document.getElementById("result");
+document.addEventListener("DOMContentLoaded", function () {
 
-form.addEventListener("submit", function (event) {
-    event.preventDefault();
+    const dobInput = document.getElementById("dob");
+    const result = document.getElementById("result");
+    const submitBtn = document.getElementById("submitBtn");
+    const resetBtn = document.getElementById("resetBtn");
 
-const dobValue = dobInput.value;
+    submitBtn.addEventListener("click", function () {
 
-const birthDate = new Date(dobValue);
+        const dobValue = dobInput.value;
 
-const today = new Date();
+        if (!dobValue) {
+            result.textContent = "Please select your Date of Birth.";
+            return;
+        }
 
-let age = today.getFullYear() - birthDate.getFullYear();
+        const birthDate = new Date(dobValue);
+        const today = new Date();
 
-const monthDifference = today.getMonth() - birthDate.getMonth();
-    if (
-        monthDifference < 0 || (monthDifference === 0 && today.getDate() < birthDate.getDate())
-    ) {
-        age--;
-    }
+        let years = today.getFullYear() - birthDate.getFullYear();
+        let months = today.getMonth() - birthDate.getMonth();
+        let days = today.getDate() - birthDate.getDate();
 
-    if (birthDate > today) {
-        result.innerText = "Date of birth cannot be in the future.";
-        return;
-    }
+        if (days < 0) {
+            months--;
+            const lastMonth = new Date(today.getFullYear(), today.getMonth(), 0);
+            days += lastMonth.getDate();
+        }
 
-    result.innerText = "Your age is " + age + " years.";
-});
+        if (months < 0) {
+            years--;
+            months += 12;
+        }
 
-form.addEventListener("reset", function () {
-    result.innerText = "";
+        if (years < 0) {
+            result.textContent = "Date of Birth cannot be in the future.";
+            return;
+        }
+
+        result.textContent = `You are ${years} Years, ${months} Months, and ${days} Days old.`;
+    });
+
+    resetBtn.addEventListener("click", function () {
+        dobInput.value = "";
+        result.textContent = "";
+    });
+
 });

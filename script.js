@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-
     const form = document.getElementById("form");
     const result = document.getElementById("result");
     const dobInput = document.getElementById("dob");

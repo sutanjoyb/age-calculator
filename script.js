@@ -1,12 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("form");
     const result = document.getElementById("result");
-    const dobInput = document.getElementById("dob");
 
     form.addEventListener("submit", function (event) {
         event.preventDefault();
 
-        const dobValue = dobInput.value;
+        const dobValue = document.getElementById("dob").value;
 
         if (!dobValue) {
             result.textContent = "Please select your Date of Birth.";
@@ -31,12 +30,25 @@ document.addEventListener("DOMContentLoaded", function () {
             months += 12;
         }
 
-        if (years < 0) {
-            result.textContent = "Date of Birth cannot be in the future.";
-            return;
+        let parts = [];
+
+        if (years > 0) {
+            parts.push(years + (years === 1 ? " Year" : " Years"));
         }
 
-        result.textContent = `You're ${years} Years, ${months} Months, and ${days} Days old.`;
+        if (months > 0) {
+            parts.push(months + (months === 1 ? " month" : " months"));
+        }
+
+        if (days > 0) {
+            parts.push(days + (days === 1 ? " day old" : " days old"));
+        }
+
+        if (parts.length === 0) {
+            parts.push("0 days old");
+        }
+
+        result.textContent = "Your age is " + parts.join(" ") + ".";
     });
 
     form.addEventListener("reset", function () {

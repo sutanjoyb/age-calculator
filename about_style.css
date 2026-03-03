@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #ebc3db;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* NAVBAR */
+nav {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 10px 20px;
+    border-bottom: 1px solid #333;
+}
+
+.brand img {
+    width: 60px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 8px 15px;
+    transition: 0.2s ease;
+}
+
+.nav-links a:hover {
+    background-color: #ffeddf;
+    border-radius: 10px;
+    transform: translateY(-2px);
+}
+
+/* ABOUT CONTAINER */
+.about-container {
+    width: 100%;
+    max-width: 800px;
+    background-color: #ffeddf;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.about-container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.about-container h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.about-container p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.about-container ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+footer {
+    background-color: #fff;
+    border-top: 1px solid #333;
+    padding: 15px 0;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.footer-bottom .developer strong {
+    color: #c0392b;
+}
+
+.github-link {
+    text-decoration: none;
+    color: inherit;
+    font-weight: inherit;
+}
+
+.github-link i {
+    margin-right: 6px;
+}
+
+.github-link:hover {
+    color: blue;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .about-container {
+        padding: 25px;
+    }
+}

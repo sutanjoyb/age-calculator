@@ -156,6 +156,20 @@ footer {
     color: #c0392b;
 }
 
+.github-link {
+    text-decoration: none;
+    color: inherit;
+    font-weight: inherit;
+}
+
+.github-link i {
+    margin-right: 6px;
+}
+
+.github-link:hover {
+    color: blue;
+}
+
 @media (max-width: 768px) {
     nav {
         padding: 8px 12px;

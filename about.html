@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Age Calculator</title>
+    <link rel="icon" type="images/jpg" href="images/logo.jpg">
+    <link rel="stylesheet" href="about_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="brand">
+            <a href="index.html">
+                <img src="images/logo.jpg" alt="logo">
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="about-container">
+
+            <h1>About Age Calculator</h1>
+
+            <section>
+                <h2>📌 Overview</h2>
+                <p>
+                    The Age Calculator is a simple yet accurate web application designed to compute a user's age
+                    based on their Date of Birth and the current date. It calculates the exact difference in
+                    years, months, and days using JavaScript's built-in Date object.
+                </p>
+            </section>
+
+            <section>
+                <h2>⚙️ How It Works</h2>
+                <p>
+                    When a user selects their Date of Birth and submits the form, the application:
+                </p>
+                <ul>
+                    <li>Captures the selected date.</li>
+                    <li>Compares it with the current system date.</li>
+                    <li>Calculates the difference in years, months, and days.</li>
+                    <li>Adjusts negative month/day values automatically.</li>
+                    <li>Displays the result in a clean formatted output.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>🧠 Technical Implementation</h2>
+                <p>
+                    This project is built using:
+                </p>
+                <ul>
+                    <li><strong>HTML5</strong> for semantic structure</li>
+                    <li><strong>CSS3</strong> for responsive and modern styling</li>
+                    <li><strong>JavaScript</strong> for age calculation logic</li>
+                </ul>
+                <p>
+                    The application uses proper date normalization logic to handle:
+                </p>
+                <ul>
+                    <li>Month overflow adjustments</li>
+                    <li>Day corrections using previous month values</li>
+                    <li>Accurate leap year handling</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>🎯 Features</h2>
+                <ul>
+                    <li>Accurate age calculation</li>
+                    <li>Responsive design for mobile & desktop</li>
+                    <li>Clean and modern UI</li>
+                    <li>Input validation</li>
+                    <li>Reset functionality</li>
+                </ul>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Age Calculator. All Rights Reserved.</p>
+        <p class="developer">
+            Designed & Developed by:
+            <a href="https://github.com/sutanjoyb" target="_blank" class="github-link">
+                <i class="fa-brands fa-github"></i>
+                Sutanjoy Bhattacharjee
+            </a>
+        </p>
+    </div>
+</footer>
+
+</body>
+
+</html>
